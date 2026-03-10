@@ -1,65 +1,66 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Gallery | Regal Signature Cleaning",
   description:
-    "See our work in action. Browse before and after photos of our residential cleaning projects.",
+    "See our work in action. Browse photos showcasing the standard of cleanliness we deliver to homes across Windsor and Berkshire.",
 };
 
 const galleryItems = [
   {
-    title: "Modern Kitchen Deep Clean",
+    title: "Elegant Kitchen",
     category: "Kitchen",
-    description: "Complete kitchen transformation including appliance detailing, grout cleaning, and surface polish.",
-    color: "from-gold/20 to-gold/5",
+    description: "Spotless surfaces, gleaming countertops, and immaculate appliances — the heart of the home deserves nothing less.",
+    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
   },
   {
-    title: "Master Bathroom Refresh",
+    title: "Luxury Bathroom",
     category: "Bathroom",
-    description: "Tile scrubbing, fixture polishing, and glass shower restoration to a sparkling finish.",
-    color: "from-navy/20 to-navy/5",
+    description: "Pristine tiles, sparkling fixtures, and a fresh, hygienic space ready to impress.",
+    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
   },
   {
-    title: "Move-Out Deep Clean",
-    category: "Move-Out",
-    description: "Comprehensive cleaning of a 3-bedroom apartment for deposit return — every detail covered.",
-    color: "from-gold/20 to-gold/5",
-  },
-  {
-    title: "Open-Plan Living Room",
+    title: "Living Room Refresh",
     category: "Living Space",
-    description: "Carpet deep-cleaning, upholstery treatment, and full surface dusting in a family home.",
-    color: "from-navy/20 to-navy/5",
+    description: "Dust-free surfaces, plumped cushions, and a welcoming atmosphere for family and guests.",
+    image: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80",
   },
   {
-    title: "Luxury Condo Showcase",
-    category: "Deep Clean",
-    description: "Premium staging-level clean for real estate showing — windows, floors, and every surface gleaming.",
-    color: "from-gold/20 to-gold/5",
+    title: "Contemporary Kitchen",
+    category: "Kitchen",
+    description: "Clean lines, polished surfaces, and attention to every detail in a modern family kitchen.",
+    image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
   },
   {
-    title: "Post-Renovation Home",
-    category: "Post-Renovation",
-    description: "Full debris removal, dust elimination, and final polish for a newly renovated family home.",
-    color: "from-navy/20 to-navy/5",
-  },
-  {
-    title: "Whole House Seasonal Clean",
-    category: "Deep Clean",
-    description: "Top-to-bottom spring cleaning including windows, baseboards, and behind all furniture.",
-    color: "from-gold/20 to-gold/5",
-  },
-  {
-    title: "Kids Room & Playroom",
+    title: "Master Bedroom",
     category: "Bedroom",
-    description: "Thorough sanitization and organization of children's spaces, toy cleaning, and carpet treatment.",
-    color: "from-navy/20 to-navy/5",
+    description: "Fresh linens, dust-free surfaces, and a serene space for restful sleep.",
+    image: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=800&q=80",
   },
   {
-    title: "Guest Suite Preparation",
+    title: "Spa-Like Bathroom",
+    category: "Bathroom",
+    description: "Immaculate marble, gleaming chrome, and that just-cleaned freshness.",
+    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+  },
+  {
+    title: "Bright Open Plan",
+    category: "Living Space",
+    description: "Spotless floors, streak-free glass, and every surface shining throughout the space.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+  },
+  {
+    title: "Guest Suite",
     category: "Bedroom",
-    description: "Fresh linens, polished surfaces, and hotel-level cleanliness for visiting family and friends.",
-    color: "from-gold/20 to-gold/5",
+    description: "Hotel-quality cleanliness for visiting family and friends — first impressions matter.",
+    image: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?w=800&q=80",
+  },
+  {
+    title: "Premium Finishes",
+    category: "Deep Clean",
+    description: "Detailed cleaning that brings out the beauty in quality fixtures and finishes.",
+    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
   },
 ];
 
@@ -77,8 +78,8 @@ export default function GalleryPage() {
             Project <span className="text-gradient-gold">Gallery</span>
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Every home has a story. Here&apos;s a look at some of the spaces
-            we&apos;ve transformed with our signature cleaning service.
+            A glimpse into the standard of cleanliness we deliver to homes
+            across Windsor and Berkshire.
           </p>
         </div>
       </section>
@@ -98,7 +99,10 @@ export default function GalleryPage() {
               Bathroom
             </span>
             <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Deep Clean
+              Living Space
+            </span>
+            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
+              Bedroom
             </span>
           </div>
 
@@ -109,24 +113,18 @@ export default function GalleryPage() {
                 key={i}
                 className="card-hover group rounded-2xl overflow-hidden bg-white border border-gray-100"
               >
-                {/* Placeholder image area */}
-                <div
-                  className={`aspect-[4/3] bg-gradient-to-br ${item.color} flex items-center justify-center relative overflow-hidden`}
-                >
-                  <div className="text-center px-6">
-                    <div className="w-16 h-16 mx-auto rounded-2xl bg-white/50 flex items-center justify-center mb-4">
-                      <svg className="w-8 h-8 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                      </svg>
-                    </div>
-                    <p className="text-navy/30 text-sm font-medium">
-                      Add your photo here
-                    </p>
-                  </div>
-
+                {/* Image */}
+                <div className="aspect-[4/3] relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
                   {/* Category badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/80 backdrop-blur-sm text-navy text-xs font-semibold px-3 py-1 rounded-full">
+                    <span className="bg-white/90 backdrop-blur-sm text-navy text-xs font-semibold px-3 py-1 rounded-full">
                       {item.category}
                     </span>
                   </div>
