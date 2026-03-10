@@ -64,11 +64,11 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {[
-                "Regular Home Cleaning",
-                "Premium Cleaning",
-                "Deep Cleaning",
-                "Move-In/Move-Out",
-                "Post-Renovation",
+                "Essential Clean",
+                "Signature Clean",
+                "Deep Clean",
+                "Oven & Fridge Clean",
+                "Airbnb Turnover",
               ].map((service) => (
                 <li key={service}>
                   <Link
