@@ -18,7 +18,7 @@ const services = [
       "Vacuuming & mopping all floors",
       "Dusting accessible surfaces",
       "Emptying bins & replacing liners",
-      "Bed making",
+      "General tidy finish",
     ],
     popular: false,
   },
