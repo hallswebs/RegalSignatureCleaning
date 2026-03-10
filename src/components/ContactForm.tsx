@@ -154,6 +154,28 @@ export default function ContactForm() {
       </div>
 
       <div>
+        <label htmlFor="propertyType" className="block text-sm font-medium text-navy mb-2">
+          Property Size & Type
+        </label>
+        <select
+          id="propertyType"
+          name="propertyType"
+          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gold focus:border-transparent outline-none transition-all text-navy bg-white"
+        >
+          <option value="">Select property type...</option>
+          <option value="studio-apartment">Studio Apartment</option>
+          <option value="1-bed-apartment">1 Bed Apartment</option>
+          <option value="2-bed-apartment">2 Bed Apartment</option>
+          <option value="2-bed-house">2 Bed House</option>
+          <option value="3-bed-house">3 Bed House</option>
+          <option value="4-bed-house">4 Bed House</option>
+          <option value="5-bed-house">5 Bed House</option>
+          <option value="6-plus-bed">6+ Bed Property</option>
+          <option value="other-property">Other</option>
+        </select>
+      </div>
+
+      <div>
         <label htmlFor="message" className="block text-sm font-medium text-navy mb-2">
           Message *
         </label>
