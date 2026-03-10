@@ -78,9 +78,9 @@ export default function AboutPage() {
             Our <span className="text-gradient-gold">Story</span>
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Founded on the principle that cleanliness elevates every environment,
-            Regal Signature Cleaning has grown from a small local service to a trusted
-            name in residential and commercial cleaning.
+            Founded on the principle that cleanliness elevates every home,
+            Regal Signature Cleaning delivers exceptional service to
+            discerning homeowners across Windsor and Berkshire.
           </p>
         </div>
       </section>
@@ -97,16 +97,16 @@ export default function AboutPage() {
                 Elevating Spaces, Enriching Lives
               </h2>
               <p className="text-navy/60 leading-relaxed mb-6">
-                At Regal Signature Cleaning, we believe a clean environment is the foundation
-                for productivity, comfort, and wellbeing. Our mission is to deliver an
-                exceptional standard of cleanliness that transforms how people feel in their
-                homes and workplaces.
+                At Regal Signature Cleaning, we believe a clean home is the foundation
+                for comfort, relaxation, and wellbeing. Our mission is to deliver an
+                exceptional standard of cleanliness that transforms how families feel in their
+                homes.
               </p>
               <p className="text-navy/60 leading-relaxed mb-8">
-                What began as a commitment to helping neighbors maintain beautiful homes has
-                grown into a comprehensive cleaning company serving both residential and
-                commercial clients. Through it all, our core values have remained the same:
-                quality, trust, and attention to every detail.
+                We are dedicated to serving families throughout Windsor and Berkshire,
+                bringing our signature attention to detail to every home we clean.
+                Our core values guide everything we do:
+                quality, trust, and meticulous attention to every detail.
               </p>
               <Link
                 href="/contact"
@@ -118,21 +118,22 @@ export default function AboutPage() {
 
             <div className="relative">
               <div className="bg-cream rounded-3xl p-10">
-                <div className="space-y-8">
+                <h3 className="text-xl font-bold text-navy mb-6">Our Approach</h3>
+                <div className="space-y-6">
                   {[
-                    { year: "Year 1", text: "Started with residential cleaning in the local community." },
-                    { year: "Year 2", text: "Expanded to commercial spaces and hired our first team." },
-                    { year: "Year 3", text: "Earned 100+ five-star reviews from satisfied clients." },
-                    { year: "Today", text: "Serving 500+ clients with a growing team of specialists." },
-                  ].map((milestone, i) => (
+                    { title: "Personalised Service", text: "Every home is unique. We tailor our cleaning to your specific needs and preferences." },
+                    { title: "Attention to Detail", text: "We focus on the finer points that make the difference between clean and immaculate." },
+                    { title: "Premium Products", text: "We use only high-quality, eco-friendly products safe for families and pets." },
+                    { title: "Complete Peace of Mind", text: "Fully insured and professionally trained — your home is in trusted hands." },
+                  ].map((item, i) => (
                     <div key={i} className="flex gap-4">
                       <div className="flex flex-col items-center">
                         <div className="w-4 h-4 rounded-full bg-gold" />
                         {i < 3 && <div className="w-0.5 h-full bg-gold/20 mt-2" />}
                       </div>
                       <div>
-                        <div className="text-gold font-semibold text-sm">{milestone.year}</div>
-                        <p className="text-navy/60 mt-1">{milestone.text}</p>
+                        <div className="text-gold font-semibold text-sm">{item.title}</div>
+                        <p className="text-navy/60 mt-1">{item.text}</p>
                       </div>
                     </div>
                   ))}

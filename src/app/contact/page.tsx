@@ -50,8 +50,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Phone</h3>
-                    <a href="tel:+15551234567" className="text-navy/60 hover:text-gold transition-colors">
-                      (555) 123-4567
+                    <a href="tel:+447544886142" className="text-navy/60 hover:text-gold transition-colors">
+                      07544 886142
                     </a>
                   </div>
                 </div>
@@ -64,8 +64,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Email</h3>
-                    <a href="mailto:info@regalsignaturecleaning.com" className="text-navy/60 hover:text-gold transition-colors">
-                      info@regalsignaturecleaning.com
+                    <a href="mailto:regalsignaturegroupltd@gmail.com" className="text-navy/60 hover:text-gold transition-colors">
+                      regalsignaturegroupltd@gmail.com
                     </a>
                   </div>
                 </div>
@@ -93,8 +93,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Service Area</h3>
-                    <p className="text-navy/60 text-sm">Serving the Greater Metro Area</p>
-                    <p className="text-navy/60 text-sm">Residential &amp; Commercial</p>
+                    <p className="text-navy/60 text-sm">Windsor, Berkshire &amp; surrounding areas</p>
+                    <p className="text-navy/60 text-sm">Premium Residential Properties</p>
                   </div>
                 </div>
               </div>

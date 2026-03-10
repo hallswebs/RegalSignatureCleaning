@@ -3,62 +3,62 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Gallery | Regal Signature Cleaning",
   description:
-    "See our work in action. Browse before and after photos of our residential and commercial cleaning projects.",
+    "See our work in action. Browse before and after photos of our residential cleaning projects.",
 };
 
 const galleryItems = [
   {
     title: "Modern Kitchen Deep Clean",
-    category: "Residential",
+    category: "Kitchen",
     description: "Complete kitchen transformation including appliance detailing, grout cleaning, and surface polish.",
     color: "from-gold/20 to-gold/5",
   },
   {
-    title: "Executive Office Suite",
-    category: "Commercial",
-    description: "Daily upkeep of a 5,000 sq ft office space with conference rooms and open-plan workspace.",
-    color: "from-navy/20 to-navy/5",
-  },
-  {
     title: "Master Bathroom Refresh",
-    category: "Residential",
+    category: "Bathroom",
     description: "Tile scrubbing, fixture polishing, and glass shower restoration to a sparkling finish.",
-    color: "from-gold/20 to-gold/5",
-  },
-  {
-    title: "Retail Storefront",
-    category: "Commercial",
-    description: "Weekly cleaning of a high-traffic fashion retail space including display and stock areas.",
     color: "from-navy/20 to-navy/5",
   },
   {
     title: "Move-Out Deep Clean",
-    category: "Residential",
+    category: "Move-Out",
     description: "Comprehensive cleaning of a 3-bedroom apartment for deposit return — every detail covered.",
     color: "from-gold/20 to-gold/5",
   },
   {
-    title: "Post-Construction Cleanup",
-    category: "Commercial",
-    description: "Full debris removal, dust elimination, and final polish for a newly renovated office building.",
-    color: "from-navy/20 to-navy/5",
-  },
-  {
     title: "Open-Plan Living Room",
-    category: "Residential",
+    category: "Living Space",
     description: "Carpet deep-cleaning, upholstery treatment, and full surface dusting in a family home.",
-    color: "from-gold/20 to-gold/5",
-  },
-  {
-    title: "Medical Office",
-    category: "Commercial",
-    description: "Sanitized cleaning meeting healthcare standards for a multi-room medical practice.",
     color: "from-navy/20 to-navy/5",
   },
   {
     title: "Luxury Condo Showcase",
-    category: "Residential",
+    category: "Deep Clean",
     description: "Premium staging-level clean for real estate showing — windows, floors, and every surface gleaming.",
+    color: "from-gold/20 to-gold/5",
+  },
+  {
+    title: "Post-Renovation Home",
+    category: "Post-Renovation",
+    description: "Full debris removal, dust elimination, and final polish for a newly renovated family home.",
+    color: "from-navy/20 to-navy/5",
+  },
+  {
+    title: "Whole House Seasonal Clean",
+    category: "Deep Clean",
+    description: "Top-to-bottom spring cleaning including windows, baseboards, and behind all furniture.",
+    color: "from-gold/20 to-gold/5",
+  },
+  {
+    title: "Kids Room & Playroom",
+    category: "Bedroom",
+    description: "Thorough sanitization and organization of children's spaces, toy cleaning, and carpet treatment.",
+    color: "from-navy/20 to-navy/5",
+  },
+  {
+    title: "Guest Suite Preparation",
+    category: "Bedroom",
+    description: "Fresh linens, polished surfaces, and hotel-level cleanliness for visiting family and friends.",
     color: "from-gold/20 to-gold/5",
   },
 ];
@@ -77,7 +77,7 @@ export default function GalleryPage() {
             Project <span className="text-gradient-gold">Gallery</span>
           </h1>
           <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            Every space has a story. Here&apos;s a look at some of the homes and businesses
+            Every home has a story. Here&apos;s a look at some of the spaces
             we&apos;ve transformed with our signature cleaning service.
           </p>
         </div>
@@ -92,10 +92,13 @@ export default function GalleryPage() {
               All Projects
             </span>
             <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Residential
+              Kitchen
             </span>
             <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Commercial
+              Bathroom
+            </span>
+            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
+              Deep Clean
             </span>
           </div>
 
@@ -112,15 +115,9 @@ export default function GalleryPage() {
                 >
                   <div className="text-center px-6">
                     <div className="w-16 h-16 mx-auto rounded-2xl bg-white/50 flex items-center justify-center mb-4">
-                      {item.category === "Residential" ? (
-                        <svg className="w-8 h-8 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
-                      ) : (
-                        <svg className="w-8 h-8 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                        </svg>
-                      )}
+                      <svg className="w-8 h-8 text-navy/40" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                      </svg>
                     </div>
                     <p className="text-navy/30 text-sm font-medium">
                       Add your photo here

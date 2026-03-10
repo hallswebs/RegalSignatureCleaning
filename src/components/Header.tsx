@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -20,9 +21,13 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center text-navy font-bold text-lg">
-              R
-            </div>
+            <Image
+              src="/logo.png"
+              alt="Regal Signature Cleaning"
+              width={80}
+              height={80}
+              className="rounded-full"
+            />
             <div>
               <span className="text-white font-bold text-lg tracking-wide group-hover:text-gold transition-colors">
                 Regal Signature

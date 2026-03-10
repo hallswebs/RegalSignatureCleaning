@@ -15,13 +15,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Regal Signature Cleaning | Premium Residential & Commercial Cleaning",
+  title: "Regal Signature Cleaning | Premium Residential Cleaning Services",
   description:
-    "Regal Signature Cleaning delivers premium residential and commercial cleaning services. Experience the highest standard of cleanliness with our professional team.",
-  keywords: "cleaning service, residential cleaning, commercial cleaning, deep cleaning, professional cleaners",
+    "Regal Signature Cleaning delivers premium residential cleaning services. Experience the highest standard of home cleanliness with our professional team.",
+  keywords: "cleaning service, residential cleaning, house cleaning, deep cleaning, home cleaners, maid service",
   openGraph: {
     title: "Regal Signature Cleaning",
-    description: "Premium Residential & Commercial Cleaning Services",
+    description: "Premium Residential Cleaning Services",
     type: "website",
   },
 };

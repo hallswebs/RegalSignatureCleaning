@@ -4,12 +4,12 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services & Pricing | Regal Signature Cleaning",
   description:
-    "Explore our residential and commercial cleaning packages. Transparent pricing, flexible scheduling, and guaranteed satisfaction.",
+    "Explore our residential cleaning packages. Transparent pricing, flexible scheduling, and guaranteed satisfaction.",
 };
 
 const services = [
   {
-    category: "Residential",
+    category: "Regular Cleaning",
     items: [
       {
         name: "Standard Home Cleaning",
@@ -39,6 +39,24 @@ const services = [
         popular: true,
       },
       {
+        name: "Basic Tidy-Up",
+        price: "From $80",
+        frequency: "Weekly / Bi-weekly",
+        features: [
+          "Quick surface cleaning",
+          "Bathroom refresh",
+          "Kitchen counters & sink",
+          "Vacuuming main areas",
+          "Ideal for maintenance between deep cleans",
+        ],
+        popular: false,
+      },
+    ],
+  },
+  {
+    category: "Specialty Services",
+    items: [
+      {
         name: "Deep Cleaning",
         price: "From $300",
         frequency: "One-time / Seasonal",
@@ -52,47 +70,30 @@ const services = [
         ],
         popular: false,
       },
-    ],
-  },
-  {
-    category: "Commercial",
-    items: [
       {
-        name: "Office Cleaning",
-        price: "Custom Quote",
-        frequency: "Daily / Weekly / Monthly",
+        name: "Move-In / Move-Out",
+        price: "From $350",
+        frequency: "One-time",
         features: [
-          "Workspace & desk sanitization",
-          "Break room & kitchen cleaning",
-          "Restroom deep clean & restock",
-          "Floor care (carpet & hard floors)",
-          "Trash & recycling management",
+          "Full property deep clean",
+          "Inside all cabinets & closets",
+          "Appliance interior cleaning",
+          "Window sills & tracks",
+          "Baseboards & door frames",
+          "Deposit-ready results",
         ],
-        popular: false,
+        popular: true,
       },
       {
-        name: "Retail & Showroom",
-        price: "Custom Quote",
-        frequency: "Flexible scheduling",
-        features: [
-          "Display & fixture dusting",
-          "Storefront glass cleaning",
-          "Floor polishing & maintenance",
-          "Fitting room sanitization",
-          "After-hours service available",
-        ],
-        popular: false,
-      },
-      {
-        name: "Post-Construction",
-        price: "Custom Quote",
+        name: "Post-Renovation",
+        price: "From $400",
         frequency: "One-time",
         features: [
           "Dust & debris removal",
           "Window & glass cleaning",
           "Paint overspray cleanup",
           "Fixture & surface polishing",
-          "Final deep clean for occupancy",
+          "Final deep clean for move-in",
         ],
         popular: false,
       },
@@ -133,7 +134,7 @@ export default function ServicesPage() {
       {services.map((category) => (
         <section
           key={category.category}
-          className={`py-24 ${category.category === "Residential" ? "bg-white" : "bg-cream"}`}
+          className={`py-24 ${category.category === "Regular Cleaning" ? "bg-white" : "bg-cream"}`}
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">

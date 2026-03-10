@@ -7,17 +7,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
       </svg>
     ),
-    title: "Residential Cleaning",
-    description: "Thorough home cleaning tailored to your lifestyle. From weekly maintenance to deep seasonal cleans.",
-  },
-  {
-    icon: (
-      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-    title: "Commercial Cleaning",
-    description: "Keep your workspace pristine with our professional commercial cleaning solutions for offices, retail, and more.",
+    title: "Regular Home Cleaning",
+    description: "Thorough home cleaning tailored to your lifestyle. Weekly, bi-weekly, or monthly visits to keep your space spotless.",
   },
   {
     icon: (
@@ -27,6 +18,15 @@ const services = [
     ),
     title: "Deep Cleaning",
     description: "Intensive top-to-bottom cleaning for a fresh start. Ideal for seasonal refreshes and special occasions.",
+  },
+  {
+    icon: (
+      <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+      </svg>
+    ),
+    title: "Move-In / Move-Out",
+    description: "Make your move stress-free with our comprehensive cleaning before you settle in or after you leave.",
   },
 ];
 
@@ -39,23 +39,23 @@ const testimonials = [
   },
   {
     name: "James T.",
-    role: "Office Manager",
-    text: "We switched to Regal Signature for our office and couldn&apos;t be happier. Professional, reliable, and thorough every time.",
+    role: "Busy Parent",
+    text: "With three kids, keeping the house clean felt impossible. Regal Signature gives us our weekends back. Professional, reliable, and thorough every time.",
     stars: 5,
   },
   {
     name: "Linda K.",
-    role: "Property Manager",
-    text: "They handle all our move-out cleans. Consistently excellent results that help us get properties rented faster.",
+    role: "Homeowner",
+    text: "They handled our move-out clean and it was spotless. Helped us get our full deposit back. Consistently excellent results!",
     stars: 5,
   },
 ];
 
-const stats = [
-  { number: "500+", label: "Happy Clients" },
-  { number: "2,000+", label: "Cleanings Completed" },
-  { number: "100%", label: "Satisfaction Rate" },
-  { number: "5+", label: "Years of Service" },
+const highlights = [
+  { icon: "sparkles", label: "Meticulous Attention to Detail" },
+  { icon: "shield", label: "Fully Insured & Vetted" },
+  { icon: "leaf", label: "Eco-Friendly Products" },
+  { icon: "clock", label: "Flexible Scheduling" },
 ];
 
 export default function Home() {
@@ -92,8 +92,8 @@ export default function Home() {
           </h1>
 
           <p className="animate-fade-in-up animate-delay-400 text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-            Experience the highest standard of residential and commercial cleaning.
-            Our meticulous team ensures every space reflects the quality you deserve.
+            Experience the highest standard of residential cleaning services.
+            Our meticulous team ensures your home reflects the quality you deserve.
           </p>
 
           <div className="animate-fade-in-up animate-delay-600 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -120,17 +120,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Highlights Section */}
       <section className="bg-cream py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-gradient-gold mb-2">
-                  {stat.number}
+            {highlights.map((item) => (
+              <div key={item.label} className="text-center">
+                <div className="w-12 h-12 mx-auto rounded-full bg-gold/10 flex items-center justify-center mb-3">
+                  <svg className="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    {item.icon === "sparkles" && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
+                    {item.icon === "shield" && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />}
+                    {item.icon === "leaf" && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />}
+                    {item.icon === "clock" && <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />}
+                  </svg>
                 </div>
-                <div className="text-navy/60 text-sm uppercase tracking-wider font-medium">
-                  {stat.label}
+                <div className="text-navy/70 text-sm font-medium">
+                  {item.label}
                 </div>
               </div>
             ))}
@@ -149,8 +154,8 @@ export default function Home() {
               Our Cleaning Services
             </h2>
             <p className="text-navy/60 text-lg max-w-2xl mx-auto">
-              From cozy homes to busy offices, we provide tailored cleaning solutions
-              that exceed expectations every time.
+              From weekly maintenance to deep seasonal cleans, we provide tailored home cleaning
+              solutions that exceed expectations every time.
             </p>
           </div>
 
@@ -314,7 +319,7 @@ export default function Home() {
           </h2>
           <p className="text-navy/60 text-lg mb-10 max-w-2xl mx-auto">
             Get in touch today for a free, no-obligation quote. Let us show you why
-            Regal Signature Cleaning is the trusted choice for homes and businesses.
+            Regal Signature Cleaning is the trusted choice for homeowners.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
@@ -324,13 +329,13 @@ export default function Home() {
               Request a Free Quote
             </Link>
             <a
-              href="tel:+15551234567"
+              href="tel:+447544886142"
               className="flex items-center gap-2 px-10 py-4 rounded-full text-base font-medium text-navy border-2 border-navy/20 hover:border-gold hover:text-gold transition-all"
             >
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              (555) 123-4567
+              07544 886142
             </a>
           </div>
         </div>
