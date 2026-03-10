@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-navy text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="py-16 grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
@@ -51,31 +51,6 @@ export default function Footer() {
                     className="text-white/60 hover:text-gold transition-colors text-sm"
                   >
                     {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="text-gold font-semibold text-sm uppercase tracking-wider mb-4">
-              Services
-            </h4>
-            <ul className="space-y-3">
-              {[
-                "Essential Clean",
-                "Signature Clean",
-                "Deep Clean",
-                "Oven & Fridge Clean",
-                "Airbnb Turnover",
-              ].map((service) => (
-                <li key={service}>
-                  <Link
-                    href="/services"
-                    className="text-white/60 hover:text-gold transition-colors text-sm"
-                  >
-                    {service}
                   </Link>
                 </li>
               ))}
