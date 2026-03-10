@@ -223,7 +223,7 @@ export default function Home() {
                   },
                   {
                     title: "Satisfaction Guaranteed",
-                    desc: "Not satisfied? We'll re-clean at no additional cost. That's our promise.",
+                    desc: "Your happiness is our highest priority. We won't rest until your home shines.",
                   },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-4">
