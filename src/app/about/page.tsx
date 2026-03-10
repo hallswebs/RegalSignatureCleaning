@@ -173,7 +173,7 @@ export default function AboutPage() {
               Meet the Founders
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mt-4">
-              Your Dedicated Owners
+              The People Behind the Shine
             </h2>
           </div>
 
