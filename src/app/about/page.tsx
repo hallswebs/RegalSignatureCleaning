@@ -48,19 +48,14 @@ const values = [
 
 const team = [
   {
-    name: "The Founders",
-    role: "Owners & Operators",
-    bio: "With a shared passion for service and detail, our founders built Regal Signature Cleaning on the belief that everyone deserves a spotless space.",
+    name: "Michael Curtis",
+    role: "Owner & Operator",
+    bio: "With a passion for excellence and an eye for detail, Michael ensures every clean meets the highest standards our clients expect.",
   },
   {
-    name: "Our Cleaning Specialists",
-    role: "Expert Technicians",
-    bio: "Each specialist undergoes rigorous training to master our signature cleaning methods and exceed client expectations.",
-  },
-  {
-    name: "Client Relations Team",
-    role: "Scheduling & Support",
-    bio: "Friendly and responsive, our support team ensures booking is seamless and your needs are always heard.",
+    name: "James Walton",
+    role: "Owner & Operator",
+    bio: "James brings dedication and professionalism to every aspect of the business, committed to delivering exceptional service across Berkshire.",
   },
 ];
 
@@ -175,17 +170,17 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-gold text-sm font-semibold tracking-[0.3em] uppercase">
-              Meet the Team
+              Meet the Founders
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-navy mt-4">
-              The People Behind the Shine
+              Your Dedicated Owners
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="card-hover bg-cream rounded-2xl p-8 text-center">
-                <div className="w-20 h-20 mx-auto rounded-full bg-gold/20 flex items-center justify-center text-gold text-2xl font-bold mb-5">
+                <div className="w-24 h-24 mx-auto rounded-full bg-gold/20 flex items-center justify-center text-gold text-3xl font-bold mb-5">
                   {member.name.charAt(0)}
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-1">{member.name}</h3>
