@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Gallery | Regal Signature Cleaning",
+  title: "Cleaning Results Gallery - Before & After",
   description:
-    "See our work in action. Browse photos showcasing the standard of cleanliness we deliver to homes across Windsor and Berkshire.",
+    "See our professional cleaning results. Browse photos of spotless kitchens, bathrooms, and living spaces we've cleaned across Windsor & Berkshire homes.",
+  keywords: ["cleaning before after", "professional cleaning results", "house cleaning photos", "deep clean results"],
+  openGraph: {
+    title: "Our Cleaning Results | Regal Signature Cleaning",
+    description: "See the standard of cleanliness we deliver to homes across Windsor & Berkshire.",
+  },
+  alternates: {
+    canonical: "https://regalsignaturecleaning.co.uk/gallery",
+  },
 };
 
 const galleryItems = [
@@ -12,7 +20,7 @@ const galleryItems = [
     title: "Elegant Kitchen",
     category: "Kitchen",
     description: "Spotless surfaces, gleaming countertops, and immaculate appliances — the heart of the home deserves nothing less.",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80",
   },
   {
     title: "Luxury Bathroom",
@@ -60,52 +68,16 @@ const galleryItems = [
     title: "Premium Finishes",
     category: "Deep Clean",
     description: "Detailed cleaning that brings out the beauty in quality fixtures and finishes.",
-    image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=800&q=80",
   },
 ];
 
 export default function GalleryPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="relative bg-navy pt-32 pb-20">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold to-transparent" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-block text-gold text-sm font-semibold tracking-[0.3em] uppercase mb-4">
-            Our Work
-          </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Project <span className="text-gradient-gold">Gallery</span>
-          </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            A glimpse into the standard of cleanliness we deliver to homes
-            across Windsor and Berkshire.
-          </p>
-        </div>
-      </section>
-
       {/* Gallery Grid */}
-      <section className="py-24 bg-white">
+      <section className="pt-32 pb-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Filter badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
-            <span className="bg-navy text-white px-5 py-2 rounded-full text-sm font-medium">
-              All Projects
-            </span>
-            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Kitchen
-            </span>
-            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Bathroom
-            </span>
-            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Living Space
-            </span>
-            <span className="bg-cream text-navy/70 px-5 py-2 rounded-full text-sm font-medium hover:bg-gold hover:text-navy transition-colors cursor-pointer">
-              Bedroom
-            </span>
-          </div>
-
           {/* Gallery grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {galleryItems.map((item, i) => (

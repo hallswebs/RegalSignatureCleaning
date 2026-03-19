@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Regal Signature Cleaning",
+  title: "Get a Free Cleaning Quote - Contact Us",
   description:
-    "Get in touch with Regal Signature Cleaning. Request a free quote for residential or commercial cleaning services.",
+    "Request a free, no-obligation cleaning quote. Contact Regal Signature Cleaning by phone, email, or WhatsApp. Serving Windsor, Berkshire & surrounding areas.",
+  keywords: ["cleaning quote Windsor", "book cleaners Berkshire", "contact cleaning service", "free cleaning estimate"],
+  openGraph: {
+    title: "Get Your Free Quote | Regal Signature Cleaning",
+    description: "Request a free cleaning quote. We respond within 24 hours.",
+  },
+  alternates: {
+    canonical: "https://regalsignaturecleaning.co.uk/contact",
+  },
 };
 
 export default function ContactPage() {

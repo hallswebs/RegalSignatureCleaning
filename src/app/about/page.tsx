@@ -2,9 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Us | Regal Signature Cleaning",
+  title: "About Us - Professional Cleaners Windsor",
   description:
-    "Learn about Regal Signature Cleaning — our story, mission, and the dedicated team behind our premium cleaning services.",
+    "Meet Regal Signature Cleaning - trusted, insured, professional home cleaners serving Windsor & Berkshire. Eco-friendly products, vetted staff, 100% satisfaction guaranteed.",
+  keywords: ["professional cleaners Windsor", "trusted cleaning company Berkshire", "insured cleaners", "eco-friendly cleaning"],
+  openGraph: {
+    title: "About Regal Signature Cleaning",
+    description: "Trusted, insured professional home cleaners serving Windsor & Berkshire.",
+  },
+  alternates: {
+    canonical: "https://regalsignaturecleaning.co.uk/about",
+  },
 };
 
 const values = [
