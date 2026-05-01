@@ -32,21 +32,21 @@ const services = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    role: "Homeowner",
-    text: "Regal Signature transformed our home! Their attention to detail is unmatched. Every corner sparkles after their visit.",
+    name: "Billy Richardson",
+    role: "Google Review",
+    text: "Brilliant service from the guys at Regal Signature Cleaning. Turned up on time, worked hard, and made the place look brand new. Won't use anyone else.",
     stars: 5,
   },
   {
-    name: "James T.",
-    role: "Busy Parent",
-    text: "With three kids, keeping the house clean felt impossible. Regal Signature gives us our weekends back. Professional, reliable, and thorough every time.",
+    name: "Sean Kelleway",
+    role: "Google Review",
+    text: "Unbelievable service from the guys! They carried out a full deep clean throughout my property and I was amazed at how good of a job they done. Top team, super friendly and very professional. HIGHLY RECOMMEND, 10/10 service!!",
     stars: 5,
   },
   {
-    name: "Linda K.",
-    role: "Homeowner",
-    text: "They handled our move-out clean and it was spotless. Helped us get our full deposit back. Consistently excellent results!",
+    name: "Andrew Hall",
+    role: "Google Review",
+    text: "Really reliable cleaning service in Windsor. The team did an excellent deep clean and paid great attention to detail. Highly recommend.",
     stars: 5,
   },
 ];
