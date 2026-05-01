@@ -66,7 +66,7 @@ const team = [
     name: "James Walton",
     role: "Owner & Operator",
     image: "/James Headshot 1.png",
-    bio: "James brings dedication and professionalism to every aspect of the business, committed to delivering exceptional service across Berkshire.",
+    bio: "James, raised in Windsor, brings a strong work ethic shaped by extensive hands-on experience. He is dependable, committed, and consistently delivers high-quality results with a positive, proactive approach.",
   },
 ];
 
