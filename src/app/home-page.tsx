@@ -97,8 +97,7 @@ export default function Home() {
           </h1>
 
           <p className="animate-fade-in-up animate-delay-400 text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
-            Experience the highest standard of residential cleaning services.
-            Our meticulous team ensures your home reflects the quality you deserve.
+            The trusted choice for premium home cleaning across Windsor, Maidenhead, Eton, Ascot and surrounding areas.
           </p>
 
           <div className="animate-fade-in-up animate-delay-600 flex flex-col sm:flex-row items-center justify-center gap-4">
