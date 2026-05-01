@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -58,11 +59,13 @@ const team = [
   {
     name: "Michael Curtis",
     role: "Owner & Operator",
+    image: "/Mike Headshot 1.png",
     bio: "With a passion for excellence and an eye for detail, Michael ensures every clean meets the highest standards our clients expect.",
   },
   {
     name: "James Walton",
     role: "Owner & Operator",
+    image: "/James Headshot 1.png",
     bio: "James brings dedication and professionalism to every aspect of the business, committed to delivering exceptional service across Berkshire.",
   },
 ];
@@ -188,8 +191,14 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
             {team.map((member) => (
               <div key={member.name} className="card-hover bg-cream rounded-2xl p-8 text-center">
-                <div className="w-24 h-24 mx-auto rounded-full bg-gold/20 flex items-center justify-center text-gold text-3xl font-bold mb-5">
-                  {member.name.charAt(0)}
+                <div className="w-24 h-24 mx-auto rounded-full overflow-hidden mb-5">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-navy mb-1">{member.name}</h3>
                 <p className="text-gold text-sm font-medium mb-4">{member.role}</p>
