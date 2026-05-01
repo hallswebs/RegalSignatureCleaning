@@ -60,7 +60,7 @@ const team = [
     name: "Michael Curtis",
     role: "Owner & Operator",
     image: "/Mike Headshot 1.png",
-    bio: "With a passion for excellence and an eye for detail, Michael ensures every clean meets the highest standards our clients expect.",
+    bio: "Michael, also from Windsor, brings years of experience in customer service and management across multiple companies. He now focuses his expertise on growing Regal Signature Cleaning with a strong emphasis on service quality and client care.",
   },
   {
     name: "James Walton",
