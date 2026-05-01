@@ -215,9 +215,6 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Experience the <span className="text-gradient-gold">Regal Difference</span>?
           </h2>
-          <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied clients who trust us with their homes and businesses.
-          </p>
           <Link
             href="/contact"
             className="btn-gold inline-block px-10 py-4 rounded-full text-base font-bold tracking-wide uppercase"
