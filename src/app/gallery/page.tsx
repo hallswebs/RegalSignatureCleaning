@@ -23,10 +23,10 @@ const galleryItems = [
     image: "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=800&q=80",
   },
   {
-    title: "Luxury Bathroom",
+    title: "Spotless Family Bathroom",
     category: "Bathroom",
     description: "Pristine tiles, sparkling fixtures, and a fresh, hygienic space ready to impress.",
-    image: "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    image: "/image3.jpeg",
   },
   {
     title: "Living Room Refresh",
