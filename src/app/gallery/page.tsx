@@ -38,7 +38,7 @@ const galleryItems = [
     title: "Contemporary Kitchen",
     category: "Kitchen",
     description: "Clean lines, polished surfaces, and attention to every detail in a modern family kitchen.",
-    image: "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
+    image: "/image2.jpeg",
   },
   {
     title: "Master Bedroom",
@@ -50,7 +50,7 @@ const galleryItems = [
     title: "Spa-Like Bathroom",
     category: "Bathroom",
     description: "Immaculate marble, gleaming chrome, and that just-cleaned freshness.",
-    image: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=800&q=80",
+    image: "/image4.png",
   },
   {
     title: "Bright Open Plan",
@@ -68,7 +68,7 @@ const galleryItems = [
     title: "Premium Finishes",
     category: "Deep Clean",
     description: "Detailed cleaning that brings out the beauty in quality fixtures and finishes.",
-    image: "https://images.unsplash.com/photo-1556909190-eccf4a8bf97a?w=800&q=80",
+    image: "/image5.jpeg",
   },
 ];
 
