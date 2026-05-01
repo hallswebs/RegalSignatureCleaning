@@ -62,7 +62,7 @@ const galleryItems = [
     title: "Guest Suite",
     category: "Bedroom",
     description: "Hotel-quality cleanliness for visiting family and friends — first impressions matter.",
-    image: "https://images.unsplash.com/photo-1617325247661-675ab4b64ae2?w=800&q=80",
+    image: "/imageA.jpeg",
   },
   {
     title: "Premium Finishes",
