@@ -88,8 +88,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Email</h3>
-                    <a href="mailto:regalsignaturegroupltd@gmail.com" className="text-navy/60 hover:text-gold transition-colors">
-                      regalsignaturegroupltd@gmail.com
+                    <a href="mailto:hello@regalsignaturecleaning.co.uk" className="text-navy/60 hover:text-gold transition-colors">
+                      hello@regalsignaturecleaning.co.uk
                     </a>
                   </div>
                 </div>

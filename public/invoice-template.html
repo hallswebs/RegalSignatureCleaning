@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Invoice — Regal Signature Cleaning</title>
+  <link rel="icon" type="image/png" href="logo.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #1a1a2e;
+      background: #f0ede4;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .invoice {
+      width: 210mm;
+      height: 297mm;
+      background: #ffffff;
+      box-shadow: 0 4px 40px rgba(0, 0, 0, 0.1);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top gold accent bar */
+    .top-bar {
+      height: 4px;
+      background: linear-gradient(90deg, #a8872e, #c9a84c, #e0c76a, #c9a84c, #a8872e);
+      flex-shrink: 0;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 36px 14px;
+      border-bottom: 1px solid #eee;
+      flex-shrink: 0;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+    }
+
+    .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1a1a2e;
+      line-height: 1.2;
+    }
+
+    .company-tagline {
+      font-size: 10px;
+      color: #c9a84c;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-top: 4px;
+      font-weight: 500;
+    }
+
+    .invoice-title-block {
+      text-align: right;
+    }
+
+    .invoice-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #1a1a2e;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .invoice-number {
+      font-size: 13px;
+      color: #777;
+      margin-top: 6px;
+      font-weight: 400;
+    }
+
+    /* Info section */
+    .info-section {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 36px;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .info-block h4 {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #c9a84c;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .info-block p {
+      font-size: 11px;
+      line-height: 1.5;
+      color: #444;
+    }
+
+    .info-block p strong {
+      color: #1a1a2e;
+      font-weight: 600;
+    }
+
+    .info-dates {
+      text-align: right;
+    }
+
+    .info-dates .date-row {
+      display: flex;
+      justify-content: flex-end;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    .info-dates .date-label {
+      font-size: 10px;
+      color: #999;
+      font-weight: 500;
+    }
+
+    .info-dates .date-value {
+      font-size: 11px;
+      color: #1a1a2e;
+      font-weight: 500;
+      min-width: 110px;
+      text-align: right;
+    }
+
+    /* Table */
+    .table-wrapper {
+      padding: 0 36px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #ffffff;
+      background: #1a1a2e;
+      padding: 9px 12px;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    thead th:last-child,
+    thead th:nth-child(3),
+    thead th:nth-child(4) {
+      text-align: right;
+    }
+
+    tbody td {
+      padding: 8px 12px;
+      font-size: 11px;
+      color: #444;
+      border-bottom: 1px solid #f0f0f0;
+      vertical-align: top;
+    }
+
+    tbody td:last-child,
+    tbody td:nth-child(3),
+    tbody td:nth-child(4) {
+      text-align: right;
+    }
+
+    tbody tr:nth-child(even) {
+      background: #faf8f0;
+    }
+
+    .item-name {
+      font-weight: 500;
+      color: #1a1a2e;
+    }
+
+    .item-desc {
+      font-size: 10px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Totals */
+    .totals-section {
+      display: flex;
+      justify-content: flex-end;
+      padding: 12px 36px 0;
+      flex-shrink: 0;
+    }
+
+    .totals {
+      width: 280px;
+    }
+
+    .totals-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      font-size: 11px;
+      color: #666;
+    }
+
+    .totals-row.subtotal {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 8px;
+    }
+
+    .totals-row.total {
+      border-top: 2px solid #1a1a2e;
+      margin-top: 4px;
+      padding-top: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #1a1a2e;
+    }
+
+    .totals-row.total .amount {
+      color: #c9a84c;
+    }
+
+    /* Payment info */
+    .payment-section {
+      margin: 14px 36px 0;
+      padding: 14px 20px;
+      background: #faf8f0;
+      border-left: 4px solid #c9a84c;
+      border-radius: 0 8px 8px 0;
+      flex-shrink: 0;
+    }
+
+    .payment-section h4 {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #c9a84c;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .payment-section p {
+      font-size: 10px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* Notes */
+    .notes-section {
+      padding: 12px 36px;
+      flex-shrink: 0;
+    }
+
+    .notes-section h4 {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #c9a84c;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .notes-section p {
+      font-size: 10px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      padding: 14px 36px;
+      background: #1a1a2e;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer p {
+      font-size: 9px;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    .footer a {
+      color: #c9a84c;
+      text-decoration: none;
+    }
+
+    .footer-right {
+      text-align: right;
+    }
+
+    /* Editable placeholders */
+    [contenteditable="true"] {
+      outline: none;
+      border-bottom: 1px dashed #ddd;
+      min-width: 60px;
+      display: inline-block;
+    }
+
+    [contenteditable="true"]:focus {
+      border-bottom-color: #c9a84c;
+      background: #fffdf0;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .invoice {
+        box-shadow: none;
+        width: 100%;
+      }
+      [contenteditable="true"] {
+        border-bottom: none;
+      }
+      .no-print { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="invoice">
+    <div class="top-bar"></div>
+
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <img src="logo.png" alt="Regal Signature Cleaning" class="logo" />
+        <div>
+          <div class="company-name">Regal Signature<br />Cleaning</div>
+          <div class="company-tagline">Premium Cleaning Services</div>
+        </div>
+      </div>
+      <div class="invoice-title-block">
+        <div class="invoice-title">Invoice</div>
+        <div class="invoice-number">INV-<span contenteditable="true">0001</span></div>
+      </div>
+    </div>
+
+    <!-- Info -->
+    <div class="info-section">
+      <div class="info-block">
+        <h4>Bill To</h4>
+        <p>
+          <strong contenteditable="true">Client Name</strong><br />
+          <span contenteditable="true">123 Client Street</span><br />
+          <span contenteditable="true">Windsor, Berkshire</span><br />
+          <span contenteditable="true">SL4 1AA</span><br />
+          <span contenteditable="true">client@email.com</span>
+        </p>
+      </div>
+      <div class="info-block">
+        <h4>From</h4>
+        <p>
+          <strong>Regal Signature Cleaning</strong><br />
+          Windsor, Berkshire<br />
+          07544 886142<br />
+          hello@regalsignaturecleaning.co.uk
+        </p>
+      </div>
+      <div class="info-block info-dates">
+        <h4>Details</h4>
+        <div class="date-row">
+          <span class="date-label">Invoice Date:</span>
+          <span class="date-value" contenteditable="true">05 / 04 / 2026</span>
+        </div>
+        <div class="date-row">
+          <span class="date-label">Due Date:</span>
+          <span class="date-value" contenteditable="true">19 / 04 / 2026</span>
+        </div>
+        <div class="date-row">
+          <span class="date-label">Payment Terms:</span>
+          <span class="date-value" contenteditable="true">14 Days</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line Items -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 40%;">Service Description</th>
+            <th style="width: 15%;">Qty / Hrs</th>
+            <th style="width: 20%;">Unit Price</th>
+            <th style="width: 25%;">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <div class="item-name" contenteditable="true">Signature Clean</div>
+              <div class="item-desc" contenteditable="true">Thorough cleaning with attention to detail — all rooms</div>
+            </td>
+            <td contenteditable="true">1</td>
+            <td contenteditable="true">£120.00</td>
+            <td contenteditable="true">£120.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-name" contenteditable="true">Oven Clean (Add-on)</div>
+              <div class="item-desc" contenteditable="true">Full interior oven deep clean</div>
+            </td>
+            <td contenteditable="true">1</td>
+            <td contenteditable="true">£45.00</td>
+            <td contenteditable="true">£45.00</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="item-name" contenteditable="true">Interior Windows (Add-on)</div>
+              <div class="item-desc" contenteditable="true">All interior windows cleaned streak-free</div>
+            </td>
+            <td contenteditable="true">1</td>
+            <td contenteditable="true">£30.00</td>
+            <td contenteditable="true">£30.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Totals -->
+    <div class="totals-section">
+      <div class="totals">
+        <div class="totals-row subtotal">
+          <span>Subtotal</span>
+          <span contenteditable="true">£195.00</span>
+        </div>
+        <div class="totals-row">
+          <span>VAT (0%)</span>
+          <span contenteditable="true">£0.00</span>
+        </div>
+        <div class="totals-row">
+          <span>Discount</span>
+          <span contenteditable="true">—</span>
+        </div>
+        <div class="totals-row total">
+          <span>Total Due</span>
+          <span class="amount" contenteditable="true">£195.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment Info -->
+    <div class="payment-section">
+      <h4>Payment Information</h4>
+      <p>
+        <strong>Bank Transfer:</strong> <span contenteditable="true">Sort Code: XX-XX-XX &nbsp;|&nbsp; Account No: XXXXXXXX</span><br />
+        <strong>Account Name:</strong> <span contenteditable="true">Regal Signature Group Ltd</span><br />
+        <strong>Reference:</strong> <span contenteditable="true">INV-0001</span><br /><br />
+        We also accept payment via <strong>bank transfer</strong> or <strong>cash</strong>. Please include the invoice number as a payment reference.
+      </p>
+    </div>
+
+    <!-- Notes -->
+    <div class="notes-section">
+      <h4>Notes</h4>
+      <p contenteditable="true">
+        Thank you for choosing Regal Signature Cleaning. We appreciate your trust in our services.
+        If you have any questions regarding this invoice, please contact us at 07544 886142 or hello@regalsignaturecleaning.co.uk.
+        <br /><br />
+        100% Satisfaction Guaranteed &nbsp;•&nbsp; Fully Insured &amp; Bonded &nbsp;•&nbsp; Eco-Friendly Products
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>
+        <strong style="color: #c9a84c;">Regal Signature Cleaning</strong><br />
+        Windsor, Berkshire &amp; Surrounding Areas<br />
+        <a href="mailto:hello@regalsignaturecleaning.co.uk">hello@regalsignaturecleaning.co.uk</a>
+      </p>
+      <p class="footer-right">
+        <a href="https://regalsignaturecleaning.co.uk">regalsignaturecleaning.co.uk</a><br />
+        07544 886142<br />
+        <span style="color: rgba(255,255,255,0.35);">A Spotless Space, Signature Style</span>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

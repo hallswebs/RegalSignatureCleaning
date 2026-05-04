@@ -77,8 +77,8 @@ export default function Footer() {
                   <svg className="w-4 h-4 text-gold shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <a href="mailto:regalsignaturegroupltd@gmail.com" className="hover:text-gold transition-colors">
-                    regalsignaturegroupltd@gmail.com
+                  <a href="mailto:hello@regalsignaturecleaning.co.uk" className="hover:text-gold transition-colors">
+                    hello@regalsignaturecleaning.co.uk
                   </a>
                 </li>
                 <li className="flex items-center justify-center md:justify-start gap-2">

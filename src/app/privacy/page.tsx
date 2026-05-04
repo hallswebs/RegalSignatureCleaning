@@ -98,8 +98,8 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p className="mt-4">
               To exercise these rights, contact us at{" "}
-              <a href="mailto:regalsignaturegroupltd@gmail.com" className="text-gold hover:underline">
-                regalsignaturegroupltd@gmail.com
+              <a href="mailto:hello@regalsignaturecleaning.co.uk" className="text-gold hover:underline">
+                hello@regalsignaturecleaning.co.uk
               </a>
             </p>
 
@@ -121,7 +121,7 @@ export default function PrivacyPolicyPage() {
               If you have questions about this Privacy Policy or wish to exercise your rights, contact us:
             </p>
             <ul className="list-none space-y-2 mt-4">
-              <li><strong>Email:</strong> regalsignaturegroupltd@gmail.com</li>
+              <li><strong>Email:</strong> hello@regalsignaturecleaning.co.uk</li>
               <li><strong>Phone:</strong> 07544 886142</li>
             </ul>
             <p className="mt-4">

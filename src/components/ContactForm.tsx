@@ -23,6 +23,7 @@ export default function ContactForm() {
     formData.append("access_key", WEB3FORMS_ACCESS_KEY);
     formData.append("subject", "New Quote Request - Regal Signature Cleaning");
     formData.append("from_name", "Regal Signature Website");
+    formData.append("to", "hello@regalsignaturecleaning.co.uk");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {

@@ -85,6 +85,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://regalsignaturecleaning.co.uk",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 const jsonLd = {
@@ -95,7 +100,7 @@ const jsonLd = {
   description: "Premium residential cleaning services in Windsor, Berkshire and surrounding areas. Professional deep cleaning, regular home cleaning, and move-in/move-out services.",
   url: "https://regalsignaturecleaning.co.uk",
   telephone: "+447544886142",
-  email: "regalsignaturegroupltd@gmail.com",
+  email: "hello@regalsignaturecleaning.co.uk",
   image: "https://regalsignaturecleaning.co.uk/logo.png",
   priceRange: "££",
   address: {
@@ -171,6 +176,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/logo.png" type="image/png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
